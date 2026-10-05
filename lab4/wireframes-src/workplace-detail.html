@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="common.css">
+<style>
+  .content { padding: 24px 40px; display:flex; gap: 30px; }
+  .col-left { width: 420px; }
+  .col-right { flex:1; }
+  .info-row { display:flex; justify-content:space-between; font-size:13px; padding:8px 0; border-bottom:1px dashed #ddd; }
+  .slot-row { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
+  .slot { border:1.5px solid #bbb; font-size:11px; padding:6px 8px; }
+  .slot.busy { background:#f7eaea; border-color:#c62828; color:#c62828; }
+  .slot.free { background:#f2f7f2; border-color:#2e7d32; color:#2e7d32; }
+  .error-box { border: 1.5px solid #c62828; background:#fdf2f2; color:#9b1c1c; padding: 12px 16px; font-size:12px; margin-top:16px; }
+  .alt-list { display:flex; gap:8px; margin-top:8px; }
+  .alt { border:1.5px solid #888; padding:4px 10px; font-size:11px; }
+</style></head>
+<body>
+  <div class="wf-header">
+    <div class="wf-logo">WORKSPACE</div>
+    <div class="wf-nav">
+      <span>Главная</span><span>Список мест</span><span>Мои брони</span><span>Поиск коллег</span>
+    </div>
+    <div class="wf-user">ИП</div>
+  </div>
+
+  <div class="content">
+    <div class="col-left">
+      <span class="wf-screen-tag">КАРТОЧКА РАБОЧЕГО МЕСТА</span>
+      <h2 class="wf-title">Место A-04</h2>
+      <div class="wf-label">Зона A · открытое пространство · 3 этаж</div>
+
+      <div style="margin-top:18px;">
+        <div class="info-row"><span>Статус</span><span class="wf-tag free">свободно</span></div>
+        <div class="info-row"><span>Оборудование</span><span>Монитор, Докстанция, Гарнитура</span></div>
+        <div class="info-row"><span>Тип места</span><span>стандартное</span></div>
+      </div>
+
+      <div class="wf-label" style="margin-top:18px;">Занятость на 07.10.2026</div>
+      <div class="slot-row">
+        <div class="slot free">09:00</div><div class="slot free">10:00</div>
+        <div class="slot busy">11:00</div><div class="slot busy">12:00</div>
+        <div class="slot free">13:00</div><div class="slot free">14:00</div>
+        <div class="slot free">15:00</div><div class="slot free">16:00</div>
+      </div>
+    </div>
+
+    <div class="col-right">
+      <div class="wf-box" style="padding:22px;">
+        <div class="wf-label">Форма бронирования</div>
+        <h3 style="margin:4px 0 16px;">Забронировать место A-04</h3>
+
+        <div class="wf-field" style="margin-bottom:14px;"><label>ДАТА</label><div class="wf-input" style="width:100%;">07.10.2026</div></div>
+        <div style="display:flex; gap:14px;">
+          <div class="wf-field" style="margin-bottom:14px; flex:1;"><label>НАЧАЛО</label><div class="wf-input">09:00</div></div>
+          <div class="wf-field" style="margin-bottom:14px; flex:1;"><label>ОКОНЧАНИЕ</label><div class="wf-input">18:00</div></div>
+        </div>
+        <div class="wf-btn" style="margin-top:8px;">Забронировать</div>
+
+        <div class="error-box">
+          <b>Место уже занято на это время.</b><br>Выберите другое время или одно из свободных мест:
+          <div class="alt-list">
+            <div class="alt">A-08</div><div class="alt">A-11</div><div class="alt">B-02</div>
+          </div>
+        </div>
+        <div class="wf-label" style="margin-top:10px;">↑ блок ошибки показывается только при конфликте (409)</div>
+      </div>
+    </div>
+  </div>
+</body></html>
