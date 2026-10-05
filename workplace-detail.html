@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="common.css">
+<style>
+  .content { padding: 24px 40px; }
+  .search-row { display:flex; gap:10px; margin-bottom: 20px; }
+  .result-card { display:flex; justify-content:space-between; align-items:center; border:1.5px solid #bbb; padding:12px 16px; margin-bottom:10px; }
+</style></head>
+<body>
+  <div class="wf-header">
+    <div class="wf-logo">WORKSPACE</div>
+    <div class="wf-nav">
+      <span>Главная</span><span>Список мест</span><span>Мои брони</span><span class="active">Поиск коллег</span>
+    </div>
+    <div class="wf-user">ИП</div>
+  </div>
+
+  <div class="content">
+    <span class="wf-screen-tag">ПОИСК КОЛЛЕГ</span>
+    <h2 class="wf-title">Где сидит коллега?</h2>
+    <div class="wf-label" style="margin-bottom:12px;">поиск по ФИО, показывает место на карте офиса на сегодня</div>
+
+    <div class="search-row">
+      <div class="wf-input" style="flex:1;">Иванов...</div>
+      <div class="wf-btn">Найти</div>
+    </div>
+
+    <div class="result-card">
+      <div>
+        <b>Иванов Пётр Сергеевич</b>
+        <div class="wf-label" style="margin:4px 0 0;">отдел разработки · сегодня, 09:00–18:00</div>
+      </div>
+      <div class="wf-tag free">место A-11, Зона A</div>
+    </div>
+    <div class="result-card">
+      <div>
+        <b>Иванова Алина Дмитриевна</b>
+        <div class="wf-label" style="margin:4px 0 0;">отдел продаж · бронь не найдена на сегодня</div>
+      </div>
+      <div class="wf-tag busy">нет брони</div>
+    </div>
+  </div>
+</body></html>

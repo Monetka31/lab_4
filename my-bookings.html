@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8">
+<link rel="stylesheet" href="common.css">
+<style>
+  .layout { display:flex; }
+  .filters { width: 230px; border-right: 1.5px solid #ddd; padding: 20px; min-height: 620px; }
+  .content { flex:1; padding: 20px 26px; }
+  .zone { border: 1.5px solid #bbb; padding: 14px; margin-bottom: 18px; }
+  .zone-title { font-size: 13px; font-weight:bold; margin-bottom:10px; }
+  .desk-grid { display:flex; flex-wrap:wrap; gap: 8px; }
+  .legend { display:flex; gap:16px; font-size:11px; color:#666; margin-top:16px; }
+  .legend span.dot { display:inline-block; width:10px;height:10px;border:1.5px solid #888; margin-right:4px; vertical-align:middle;}
+</style></head>
+<body>
+  <div class="wf-header">
+    <div class="wf-logo">WORKSPACE</div>
+    <div class="wf-nav">
+      <span class="active">Главная</span>
+      <span>Список мест</span>
+      <span>Мои брони</span>
+      <span>Поиск коллег</span>
+    </div>
+    <div class="wf-user">ИП</div>
+  </div>
+
+  <div class="layout">
+    <div class="filters">
+      <div class="wf-label">Фильтры</div>
+      <div class="wf-field" style="margin-bottom:14px;">
+        <label>ДАТА</label>
+        <div class="wf-input" style="width:100%;">07.10.2026</div>
+      </div>
+      <div class="wf-field" style="margin-bottom:14px;">
+        <label>ЗОНА</label>
+        <div class="wf-input" style="width:100%;">Все зоны ▾</div>
+      </div>
+      <div class="wf-field" style="margin-bottom:14px;">
+        <label>ОБОРУДОВАНИЕ</label>
+        <div class="wf-input" style="width:100%;">Монитор, Докстанция ▾</div>
+      </div>
+      <div class="wf-btn secondary" style="width:100%; text-align:center;">Сбросить</div>
+
+      <div class="legend">
+        <div><span class="dot" style="background:#f2f7f2;"></span>своб.</div>
+        <div><span class="dot" style="background:#f7eaea;"></span>занято</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <span class="wf-screen-tag">ГЛАВНАЯ — КАРТА ОФИСА</span>
+      <h2 class="wf-title">Карта офиса на 07.10.2026</h2>
+      <div class="wf-label" style="margin-bottom:16px;">нажмите на место, чтобы увидеть детали и забронировать</div>
+
+      <div class="zone">
+        <div class="zone-title">Зона A — открытое пространство, 3 этаж</div>
+        <div class="desk-grid">
+          <div class="wf-desk free">A-01</div>
+          <div class="wf-desk busy">A-02</div>
+          <div class="wf-desk free">A-03</div>
+          <div class="wf-desk selected">A-04</div>
+          <div class="wf-desk free">A-05</div>
+          <div class="wf-desk free">A-06</div>
+          <div class="wf-desk busy">A-07</div>
+          <div class="wf-desk free">A-08</div>
+        </div>
+      </div>
+
+      <div class="zone">
+        <div class="zone-title">Зона B — переговорные, 3 этаж</div>
+        <div class="desk-grid">
+          <div class="wf-desk free">B-01</div>
+          <div class="wf-desk busy">B-02</div>
+          <div class="wf-desk free">B-03</div>
+        </div>
+      </div>
+
+      <div style="margin-top:10px;">
+        <span class="wf-btn">Забронировать место A-04</span>
+      </div>
+    </div>
+  </div>
+</body></html>
